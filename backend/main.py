@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from typing import Any, Dict, List
 
@@ -11,18 +12,40 @@ from metrics import calculate_citation_share
 
 app = FastAPI(title="AI Visibility Tracker MVP")
 
-# Allow frontend access
+# ===============================
+# CORS CONFIGURATION
+# ===============================
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://ai-visibility-tracker-pi.vercel.app"
+        "https://ai-visibility-tracker-pi.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# ===============================
+# FIX FOR RENDER PREFLIGHT ISSUE
+# ===============================
+@app.options("/analyze")
+def options_analyze():
+    return JSONResponse(
+        status_code=200,
+        content={"message": "OK"},
+        headers={
+            "Access-Control-Allow-Origin": "https://ai-visibility-tracker-pi.vercel.app",
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            "Access-Control-Allow-Credentials": "true",
+        },
+    )
+
+
+# ===============================
+# ANALYZE BRAND
+# ===============================
 @app.post("/analyze")
 def analyze_brand(payload: Dict[str, Any]) -> Dict[str, Any]:
     brand = payload.get("brand") or ""
@@ -51,6 +74,10 @@ def analyze_brand(payload: Dict[str, Any]) -> Dict[str, Any]:
         "results": results
     }
 
+
+# ===============================
+# ROOT CHECK
+# ===============================
 @app.get("/")
 def root():
     return {
