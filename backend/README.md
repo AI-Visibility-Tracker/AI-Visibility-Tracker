@@ -1,4 +1,4 @@
-# AI Visibility Tracker — Backend
+# 🎨 AI Visibility Tracker — Backend
 
 🚀 **FastAPI-powered backend** for analyzing brand visibility in AI model recommendations.
 
