@@ -14,7 +14,10 @@ app = FastAPI(title="AI Visibility Tracker MVP")
 # Allow frontend access
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://ai-visibility-tracker-iota.vercel.app"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
