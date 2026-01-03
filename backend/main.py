@@ -16,7 +16,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://ai-visibility-tracker-iota.vercel.app"
+        "https://ai-visibility-tracker-pi.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
