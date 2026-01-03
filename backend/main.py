@@ -18,6 +18,7 @@ app.add_middleware(
         "http://localhost:5173",
         "https://ai-visibility-tracker-iota.vercel.app"
     ],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
