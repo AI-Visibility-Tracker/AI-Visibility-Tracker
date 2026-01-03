@@ -9,14 +9,13 @@ from metrics import calculate_citation_share
 
 app = FastAPI(title="AI Visibility Tracker MVP")
 
-# ✅ CORS — SIMPLE & CORRECT
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "https://ai-visibility-tracker-9a0a.onrender.com"
     ],
-    allow_credentials=False,   # 🔥 THIS IS THE FIX
+    allow_credentials=False,   
     allow_methods=["*"],
     allow_headers=["*"],
 )
