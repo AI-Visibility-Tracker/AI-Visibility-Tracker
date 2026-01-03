@@ -1,49 +1,63 @@
-🎨 AI Visibility Tracker — Frontend (MVP)
+# 🎨 AI Visibility Tracker — Frontend (MVP)
 
-This directory contains the frontend application for the AI Visibility Tracker MVP.
-It is responsible for collecting user input, calling the backend API, and presenting AI visibility insights through a clean, interactive dashboard.
+This directory contains the **frontend application** for the **AI Visibility Tracker MVP**.  
+It collects user input, calls the backend API, and presents **AI visibility insights** through a clean, interactive dashboard.
 
-📌 Overview
+---
 
-The frontend is a React + Tailwind CSS application that visualizes how often a brand appears in AI-generated recommendations.
+## 📌 Overview
+
+The frontend is a **React + Tailwind CSS** application that visualizes how often a brand appears in AI-generated recommendations.
 
 It provides:
+- A modern dashboard UI  
+- Real-time feedback during AI analysis  
+- Clear visibility metrics  
+- Prompt-wise result breakdown  
 
-A modern dashboard UI
+The frontend was developed **independently** of the backend using a clean API contract and later integrated seamlessly.
 
-Real-time feedback during AI analysis
+---
 
-Clear visibility metrics
+## ✨ Key Features
 
-Prompt-wise result breakdown
+### 🔤 Brand Input Form
+- Allows users to enter a brand name.  
+- Initiates analysis via backend API call.
 
-The frontend was developed independently of the backend using a clean API contract and later integrated seamlessly.
+### ⚡ Real-Time Analysis Trigger
+- Interactive button to start visibility analysis.  
+- Displays loading states and disables inputs during live AI evaluation.
 
-✨ Key Features
+### 📊 AI Visibility Metrics
+- Displays citation share, brand mentions, and total prompts analyzed.
 
-🔤 Brand input form
+### 📋 Prompt-wise Result Table
+- Lists which prompts mention the brand.  
+- Displays ranking or position in responses.
 
-⚡ Real-time analysis trigger
+### ⏳ Loading Skeletons
+- Provides visual feedback during analysis.  
+- Improves perceived UX during slower AI calls.
 
-📊 AI visibility metrics (citation share, mentions)
+### 🎨 Responsive UI
+- Built with Tailwind CSS for a clean and consistent visual design.  
+- Responsive layout supports multiple screen sizes.
 
-📋 Prompt-wise result table
+---
 
-⏳ Loading skeletons for better UX
+## 🧰 Tech Stack
 
-🎨 Responsive, clean UI with Tailwind CSS
+- **React (Vite)** — modern frontend framework for speed and modularity  
+- **Tailwind CSS** — utility-first styling for a consistent design system  
+- **Axios** — API communication and error handling  
+- **Component-based architecture** — easy to extend and maintain  
 
-🧰 Tech Stack
+---
 
-React (Vite)
+## 📂 Folder Structure
 
-Tailwind CSS
-
-Axios for API communication
-
-Modern component-based architecture
-
-📂 Folder Structure
+```
 frontend/
 │
 ├── src/
@@ -60,111 +74,108 @@ frontend/
 ├── tailwind.config.js
 ├── postcss.config.js
 └── package.json
+```
 
-🚀 Getting Started
-1️⃣ Install Dependencies
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Install Dependencies
+```bash
 npm install
+```
 
-2️⃣ Run Development Server
+### 2️⃣ Run Development Server
+```bash
 npm run dev
+```
 
+**Frontend will run at:**  
+[http://localhost:5173](http://localhost:5173)
 
-Frontend will run at:
+---
 
-http://localhost:5173
-
-🔗 Backend Integration
+## 🔗 Backend Integration
 
 The frontend communicates with the backend via:
 
-POST /analyze
+**Endpoint:**  
+`POST /analyze`
 
-
-Example request:
-
+**Example request:**
+```json
 {
   "brand": "Writesonic"
 }
+```
 
-
-Expected response structure:
-
+**Expected response structure:**
+```json
 {
   "brand": "Writesonic",
   "total_prompts": 11,
   "citation_share": 63.64,
   "results": [...]
 }
-
+```
 
 The frontend dynamically renders:
+- **Citation share**
+- **Prompt count**
+- **Prompt-wise visibility results**
 
-Citation share
+---
 
-Prompt count
-
-Prompt-wise visibility results
-
-🎯 UX & Performance Design
+## 🎯 UX & Performance Design
 
 Since AI analysis can take several seconds:
+- Loading spinners and skeletons appear immediately.  
+- Buttons are disabled during processing.  
+- UI remains responsive throughout.
 
-Loading spinners and skeletons are shown immediately
+This improves **perceived performance** and ensures a smooth user experience.
 
-Buttons are disabled during analysis
+---
 
-UI remains responsive throughout
+## 🧠 Development Approach
 
-This improves perceived performance and user experience.
+- Built initially using **mock data**.  
+- Backend integration added later with no UI refactor required.  
+- Maintains a **clean separation of concerns**.  
+- Uses a **scalable component structure** to support new features easily.
 
-🧠 Development Approach
+This mirrors **real-world frontend engineering workflows** and ensures long-term maintainability.
 
-Built using mock data first
+---
 
-Backend integration added later without UI changes
+## 🛣️ Future Enhancements
 
-Clean separation of concerns
+- Competitor comparison view  
+- Expandable AI response details  
+- Export reports (CSV / PDF)  
+- Dark mode toggle  
+- Deployment to **Vercel**
 
-Scalable component structure
+---
 
-This mirrors real-world frontend engineering workflows.
+## 👨‍💻 Contribution
 
-🛣️ Future Enhancements
+The **frontend** of this MVP was designed and developed by **Gorav**.
 
-Competitor comparison view
+**Responsibilities included:**
+- Building the React dashboard architecture  
+- Implementing Tailwind CSS for clean, responsive UI  
+- Designing user-friendly input and results views  
+- Integrating with backend APIs using Axios  
+- Improving perceived performance with loading states/skeletons  
+- Maintaining production-ready structure and Git hygiene  
 
-Expandable AI response details
+The frontend was **developed independently** and later integrated with the backend using a clean API contract — reflecting **real-world collaborative development practices.**
 
-Export report (CSV / PDF)
+---
 
-Dark mode toggle
+## 📄 Notes
 
-Deployment to Vercel
-
-👨‍💻 Contribution
-
-The frontend of this MVP was designed and developed by Gorav.
-
-Responsibilities included:
-
-Building the React dashboard architecture
-
-Implementing Tailwind CSS for a clean, responsive UI
-
-Designing user-friendly input and results views
-
-Handling API integration with the backend
-
-Improving perceived performance using loading states and skeletons
-
-Ensuring production-ready structure and Git hygiene
-
-This frontend was developed independently and later integrated with the backend using a clean API contract, reflecting real-world collaborative development practices.
-
-📄 Notes
-
-This frontend depends on the backend service being active
-
-Environment variables and node_modules are intentionally excluded from Git
-
-Frontend built for clarity, performance, and future scalability 🚀
+- This frontend depends on the **backend service** being active.  
+- `.env` files and `node_modules` are intentionally excluded from version control.  
+- Built for **clarity**, **performance**, and **future scalability** 🚀
