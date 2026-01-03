@@ -5,9 +5,9 @@ Think of it as SEO analytics for Large Language Models (LLMs).
 
 📌 Overview
 
-AI Visibility Tracker is a full-stack MVP that analyzes how frequently and prominently a brand appears in AI-generated recommendations across multiple prompts.
+AI Visibility Tracker is a full-stack MVP that analyzes how frequently and prominently a brand appears in AI-generated recommendations.
 
-As AI assistants become a primary discovery channel, traditional SEO is no longer enough. This tool helps founders, marketers, and product teams understand their visibility inside AI responses — an emerging metric we call AI Visibility.
+As AI assistants become a primary discovery channel, traditional SEO is no longer enough. This project helps founders and marketers understand their visibility inside AI responses.
 
 🎯 Problem Statement
 
@@ -21,17 +21,7 @@ Tool comparisons
 
 Buying decisions
 
-However, there is no clear way to measure how visible a brand is inside AI responses.
-
-Key questions this project answers:
-
-Is my brand mentioned by AI models?
-
-How often does it appear across prompts?
-
-How prominently is it ranked?
-
-What is my AI citation share?
+However, there is no standard metric to measure how visible a brand is inside AI outputs.
 
 💡 Solution
 
@@ -43,55 +33,28 @@ Analyzes responses for brand mentions
 
 Calculates visibility metrics
 
-Presents insights via a clean dashboard
-
-This MVP provides actionable intelligence for the AI-first web.
+Displays insights in a clean dashboard
 
 ✨ Key Features
-🔍 Brand Analysis
 
-Input any brand name
+🔍 Brand visibility analysis
 
-Analyze AI recommendations across multiple prompts
+📊 Citation share calculation
 
-📊 AI Visibility Metrics
+📋 Prompt-wise visibility breakdown
 
-Total Prompts Analyzed
+⚡ Real-time AI inference
 
-Brand Mentions
+🎨 Polished dashboard UI
 
-Citation Share (%)
-
-📋 Prompt-wise Breakdown
-
-Which prompts mention the brand
-
-Whether the brand was recommended
-
-Ranking / position inside AI output
-
-⚡ Real-Time AI Evaluation
-
-Live AI inference (no mock data)
-
-Uses real LLM responses
-
-🎨 Polished Dashboard UI
-
-React + Tailwind CSS
-
-Clean, responsive, demo-ready design
-
-Loading skeletons for fast UX
-
-🏗️ Tech Stack
+🧰 Tech Stack
 Frontend
 
 React (Vite)
 
 Tailwind CSS
 
-Axios (API communication)
+Axios
 
 Backend
 
@@ -103,10 +66,10 @@ AI inference via LLM APIs (Perplexity / OpenAI-compatible)
 
 Modular architecture (prompts, analyzer, metrics)
 
-🧩 Architecture Overview
+🧠 Architecture Overview
 Frontend (React)
    │
-   │ HTTP (POST /analyze)
+   │ HTTP POST /analyze
    ▼
 Backend (FastAPI)
    ├── Prompt Generator
@@ -136,7 +99,8 @@ ai-visibility-tracker/
 │   │   │   └── ResultsTable.jsx
 │   │   ├── App.jsx
 │   │   └── main.jsx
-│   └── tailwind.config.js
+│   ├── tailwind.config.js
+│   └── package.json
 │
 └── README.md
 
@@ -148,7 +112,19 @@ cd ai-visibility-tracker
 2️⃣ Backend Setup
 cd backend
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+
+Activate environment:
+
+# Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+
+
+Install dependencies:
+
 pip install -r requirements.txt
 
 
@@ -209,42 +185,35 @@ Marketing teams optimizing AI mentions
 
 SEO teams preparing for AI-first search
 
-Product visibility benchmarking
-
 AI research & experimentation
+
+👨‍💻 Contribution
+
+Frontend: Developed by Gorav
+
+Backend: Developed by Abhay KUmar Singh
+
+Frontend responsibilities included UI design, Tailwind styling, API integration, loading states, and overall dashboard UX.
+Backend responsibilities is to design and implement the actual logic using Fast API.
 
 🛣️ Future Enhancements
 
 Competitor comparison
 
-AI response expansion modal
+Expandable AI responses
 
 Historical trend tracking
 
 Export reports (CSV / PDF)
 
-Multi-model analysis
-
-Deployment to cloud (Vercel + Render)
-
-👥 Team Collaboration - Developed by Gorav Gumber(Frontend) and Abhay Kumar Singh(Backend)
-
-This MVP was built using a parallel development workflow:
-
-Frontend and backend developed independently
-
-Integrated via a clean API contract
-
-Demonstrates real-world engineering practices
+Cloud deployment (Vercel + Render)
 
 📄 License
 
-This project is licensed for educational and demonstration purposes.
+This project is intended for educational and demonstration purposes.
 
 ⭐ Final Note
 
 AI Visibility Tracker explores a new frontier in analytics — measuring brand presence inside AI models.
 
-As AI assistants become the new search engines, tools like this will define the next generation of visibility metrics.
-
-Built with curiosity, experimentation, and future-first thinking 🚀
+As AI assistants replace traditional search, tools like this will define the future of visibility measurement.
