@@ -13,7 +13,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://ai-visibility-tracker-9a0a.onrender.com"
+        "https://ai-visibility-tracker-1.onrender.com"
     ],
     allow_credentials=False,   
     allow_methods=["*"],
