@@ -15,7 +15,7 @@ app.add_middleware(
         "http://localhost:5173",
         "https://ai-visibility-tracker-1.onrender.com"
     ],
-    allow_credentials=False,   
+    allow_credentials=True,   
     allow_methods=["*"],
     allow_headers=["*"],
 )
