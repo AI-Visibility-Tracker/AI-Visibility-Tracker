@@ -1,13 +1,27 @@
 PROMPTS = [
-    "Best AI writing tools for startups",
-    "Top content generation platforms",
-    "Best alternatives to Jasper AI",
-    "Which AI tools are best for marketers?",
-    "Best AI tools for SEO content",
-    "Best AI writing tools for bootstrapped SaaS startups 2026",
-    "Top 5 affordable AI content generators for early-stage founders",
-    "Top AI platforms for LinkedIn carousel post creation 2026",
-    "AI writing assistants for performance marketers optimizing ad copy",
-    "Best AI content generators for sustainable tourism packages",
-    "Top AI tools for creating Uttarakhand trekking itineraries"
+    # Core recommendation visibility
+    "Is {brand} a good AI writing tool for startups? Explain why or why not.",
+
+    "Would you recommend {brand} for content creation teams? Give reasons.",
+
+    "How does {brand} compare to other AI writing tools in the market?",
+
+    "What are the main strengths and weaknesses of {brand} as an AI tool?",
+
+    # Competitive positioning
+    "Which AI tools compete directly with {brand}, and how does it stand among them?",
+
+    "In what situations would you choose {brand} over other AI writing tools?",
+
+    # Use-case based visibility
+    "Is {brand} suitable for SEO-focused content creation? Explain.",
+
+    "Would performance marketers benefit from using {brand} for ad copywriting?",
+
+    "Is {brand} a good choice for bootstrapped SaaS startups? Why?",
+
+    # Decision-making & trust
+    "Would you recommend {brand} to early-stage founders looking for AI content tools?",
+
+    "What type of users should consider using {brand} as their primary AI writing assistant?"
 ]
